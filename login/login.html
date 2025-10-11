@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="imagenes/nuva_tecnologia_logo.jpg" alt="Logo" id="logo">
+      <h1>NUVA</h1>
+    </div>
+
+    <h3>Bienvenido</h3>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Contraseña">
+
+    <button onclick="iniciarSesion()">Iniciar sesión</button>
+
+  <p id="mensaje"></p>
+    <a href="../registro/index.html" class="crear-cuenta">¿No estas registrado? registrate</a><br>
+    <a href="#">¿Olvidaste tu contraseña?</a>
+    <a href="../index.html" class="volver-principal">← Volver a Inicio</a>
+   
+   <!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <!-- Paso 1: correo -->
+    <div id="paso-correo">
+      <p>Ingresa tu correo electrónico de recuperación.</p>
+      <input type="email" id="email-recuperar" placeholder="Tu correo electrónico">
+      <button id="btn-recuperar">Enviar</button>
+      <p id="mensaje-recuperar" style="color: red; min-height: 20px;"></p>
+    </div>
+
+    <!-- Paso 2: código (oculto al inicio) -->
+    <div id="paso-codigo" style="display: none;">
+      <p>Ingresa el código que recibiste en tu correo:</p>
+      <input type="text" id="codigo-recuperar" placeholder="Código de verificación">
+      <button id="btn-validar-codigo">Validar código</button>
+      <p id="mensaje-codigo" style="color: red; min-height: 20px;"></p>
+    </div>
+
+    <!-- Paso 3: nueva contraseña (oculto al inicio) -->
+    <div id="paso-nueva" style="display: none;">
+      <p>Ingresa tu nueva contraseña:</p>
+      <input type="password" id="nueva-password" placeholder="Nueva contraseña">
+      <input type="password" id="confirmar-password" placeholder="Confirma la contraseña">
+      <button id="btn-guardar-password">Guardar contraseña</button>
+      <p id="mensaje-nueva" style="color: red; min-height: 20px;"></p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>

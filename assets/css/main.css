@@ -4132,3 +4132,31 @@ input, select, textarea {
 	background-color: #e63946;
 	color: #fff !important;
 }
+
+/* Sección Five - Solo cambio de colores */
+#five {
+    background-color: #1B263B; /* Fondo azul oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+#five header h2 {
+    color: #00BFFF; /* Título azul brillante */
+}
+
+#five header p {
+    color: #e0e0e0; /* Texto descriptivo gris claro */
+}
+
+#five input[type="email"] {
+    border: 1px solid #00BFFF; /* Borde azul del input */
+    color: #000000; /* Texto del input negro */
+}
+
+#five input[type="submit"] {
+    background-color: #00BFFF; /* Botón azul brillante */
+    color: #ffffff; /* Texto del botón blanco */
+}
+
+#five input[type="submit"]:hover {
+    background-color: #009ACD; /* Azul más oscuro al pasar el mouse */
+}

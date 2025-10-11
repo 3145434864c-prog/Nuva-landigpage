@@ -1,0 +1,261 @@
+/* Fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #0b0c0d; /* fondo más elegante, casi negro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  background-color: #1e6b75; /* color de marca */
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#logo {
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Titulos */
+h1 {
+  font-size: 50px;
+  color: #f6f1e9; /* color claro, contraste */
+  font-weight: 500;
+  margin: 0;
+}
+
+h3 {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f6f1e9; /* color claro */
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+  width: 90%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f6f1e9; /* fondo claro para inputs */
+  color: #333;
+  outline: none;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+/* Botón */
+button {
+  font-size: 1.5rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #fafafa;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+button:hover {
+  background-color: #6aa985; /* verde de marca al pasar el mouse */
+}
+
+/* Links */
+a {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #f6f1e9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mensaje de validación */
+#mensaje {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: red; /* por defecto error */
+  min-height: 20px; /* evita que se mueva el layout al aparecer */
+}
+
+.volver-principal {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #252525;
+    color: #fafafa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.volver-principal:hover {
+    background-color: #6aa985;
+}
+
+/* responsive */
+
+
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  input, button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Botón volver más visible en móviles */
+.volver-principal {
+    display: block;       
+    width: 90%;          
+    padding: 15px;        
+    font-size: 1rem;      
+    margin-top: 20px;     
+    text-align: center;   
+  }
+}
+
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 1000; /* por encima de todo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /* fondo oscuro semi-transparente */
+}
+
+.modal-header {
+  padding: 15px;
+  
+  text-align: left;
+}
+/* Contenido del modal */
+.modal-content {
+  background-color: #1e6b75;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #fafafa;
+}
+
+/* Botón cerrar */
+.close {
+  color: #fafafa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #6aa985;
+}
+
+/* Input dentro del modal */
+#email-recuperar {
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Botón enviar */
+#btn-recuperar {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #252525;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+#btn-recuperar:hover {
+  background-color: #6aa985;
+}
+
+.crear-cuenta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #252525;
+    color: #fafafa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.crear-cuenta:hover {
+    background-color: #6aa985;
+}
