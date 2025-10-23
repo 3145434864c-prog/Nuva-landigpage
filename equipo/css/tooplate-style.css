@@ -10,7 +10,7 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
   font-weight: 300;
-  color: white;
+  color: rgb(255, 255, 255);
   position: relative;
 }
 
@@ -91,7 +91,7 @@ p {
 }
 
 .tm-nav-link {
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
